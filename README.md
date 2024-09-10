@@ -26,10 +26,26 @@ Flexible Output: Saves scraped data in a CSV format for easy analysis and visual
    cd FB_Group_Scraper
    ```
 
+2. **Create Config JSON file for you log in details**
+
+   ```sh
+   echo '{"facebook":{"username": [Input Username],"password": [Input Password]}}' > config.json
+
+   For example:
+   echo '{"facebook":{"username": 71234567,"password": "My_Password"}}' > config.json   
+   ```
+
+3. **Create Virtual Environment**
+   ```sh
+   python3 -m venv FB_GROUPS_ENV
+   ```
+
 2. **Install Dependencies**:
    ```sh
    pip install -r requirements.txt
    ```
 
-3. **Run the .ipynb file**:
+3. **Run the .ipynb file**
+
+Run each cell individually at first, note that some cells my take longer to run, but after the first run, they are good.
 
