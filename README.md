@@ -20,13 +20,16 @@ Flexible Output: Saves scraped data in a CSV format for easy analysis and visual
 
 ## How to Use
 
-1. **Clone the Repository**:
+1. **Get Python**
+   Get [Python](https://www.python.org/downloads/) (recommended Python 3.7+)
+
+
+2. **Clone the Repository**:
    ```sh
    git clone https://github.com/SandileDesmondMfazi/FB_Group_Posts_Scraper.git
-   cd FB_Group_Scraper
    ```
 
-2. **Create Config JSON file for you log in details**
+3. **Create Config JSON file for you log in details**
 
    ```sh
    echo '{"facebook":{"username": [Input Username],"password": [Input Password]}}' > config.json
@@ -35,17 +38,17 @@ Flexible Output: Saves scraped data in a CSV format for easy analysis and visual
    echo '{"facebook":{"username": 71234567,"password": "My_Password"}}' > config.json   
    ```
 
-3. **Create Virtual Environment**
+4. **Create Virtual Environment**
    ```sh
    python3 -m venv FB_GROUPS_ENV
    ```
 
-2. **Install Dependencies**:
+5. **Install Dependencies**:
    ```sh
    pip install -r requirements.txt
    ```
 
-3. **Run the .ipynb file**
+6. **Run the .ipynb file**
 
-Run each cell individually at first, note that some cells my take longer to run, but after the first run, they are good.
+   Run each cell individually at first, note that some cells my take longer to run, but after the first run, they are good.
 
