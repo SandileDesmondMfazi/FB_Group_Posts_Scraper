@@ -32,10 +32,10 @@ Flexible Output: Saves scraped data in a CSV format for easy analysis and visual
 3. **Create Config JSON file for you log in details**
 
    ```sh
-   echo '{"facebook":{"username": [Input Username],"password": [Input Password]}}' > config.json
+   echo '{"facebook":{"username": [Input Username],"password": [Input Password]}}' > Config_file.json
 
    For example:
-   echo '{"facebook":{"username": 71234567,"password": "My_Password"}}' > config.json   
+   echo '{"facebook":{"username": 71234567,"password": "My_Password"}}' > Config_file.json 
    ```
 
 4. **Create Virtual Environment**
