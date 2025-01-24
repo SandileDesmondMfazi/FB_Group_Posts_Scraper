@@ -1,18 +1,12 @@
 #Import Dependencies
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import os
 import time
 from bs4 import BeautifulSoup
-import re
 import pandas as pd
-import requests
-from urllib.parse import urlparse
 import json
 import lxml.html
 
@@ -44,26 +38,28 @@ Password = config['facebook']['password']
 
 
 # Set up base URL
-url = f'https://www.facebook.com/groups/ConsumerWatchdogBW'
+url = 'https://www.facebook.com/groups/ConsumerWatchdogBW'
 
 # Visit the website
 browser.get(url)
 
 # Locate the button with aria-label="Decline optional cookies" (Europe)
 try:
-    phone_input = browser.find_element(By.XPATH, '//*[@id="login_popup_cta_form"]/div/div[3]/div/div/div/label')
+    phone_input = browser.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div/div[5]/div/div/div[1]/div/div[2]/div/div/div/div[2]/form/div/div[3]/div/div/label/div/input')
     phone_input.send_keys(Username)
-    password_input = browser.find_element(By.XPATH, '//*[@id="login_popup_cta_form"]/div/div[4]/div/div/div/label')
+    password_input = browser.find_element(By.XPATH, '/html/body/div[1]/div/div[1]/div/div[5]/div/div/div[1]/div/div[2]/div/div/div/div[2]/form/div/div[4]/div/div/label/div/input')
     password_input.send_keys(Password)
     login_click = browser.find_element(By.XPATH, '//*[@id="login_popup_cta_form"]/div/div[5]/div')
     login_click.click()
     print("Logged In!")
     
-except:
+except Exception:
     print("Could not Login!")
     pass
 
 browser.implicitly_wait(20)
+
+## Part 1 End
 
 #Scroll down to load all results
 try:
