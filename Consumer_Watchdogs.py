@@ -42,6 +42,8 @@ url = 'https://www.facebook.com/groups/ConsumerWatchdogBW'
 
 # Visit the website
 browser.get(url)
+browser.implicitly_wait(5)
+browser.refresh()
 
 # Locate the button with aria-label="Decline optional cookies" (Europe)
 try:
@@ -102,6 +104,9 @@ try:
         last_height = new_height
         
         print(f"scrolled: {Count}s")
+        
+        if Count == 5:
+            break
         
 except Exception as e:
     print(f"An error occurred: {e}")
@@ -199,4 +204,4 @@ FB_Group_Data = FB_Group_Data.dropna(subset=['Author'])
 
 FB_Group_Data
 
-FB_Group_Data.to_csv('Latest_Dataset_v3.csv', encoding='utf-8', index = True)
+FB_Group_Data.to_csv('Latest_Dataset_v4.csv', encoding='utf-8', index = True)
