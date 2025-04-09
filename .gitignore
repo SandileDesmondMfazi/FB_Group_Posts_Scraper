@@ -4,6 +4,10 @@ FB_GROUPS_ENV/
 # IGNORE JSON FILE
 Config_file.json
 
+# Ignore the specific .py & .csv file
+Data_Gen.py
+fact_table.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
