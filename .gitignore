@@ -4,6 +4,9 @@ FB_GROUPS_ENV/
 # IGNORE JSON FILE
 Config_file.json
 
+weekly_outputs/
+data/
+
 # Ignore the specific .py & .csv file
 Data_Gen.py
 fact_table.csv
@@ -87,6 +90,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+*ipynb
 
 # IPython
 profile_default/
