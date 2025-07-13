@@ -6,6 +6,18 @@ Config_file.json
 
 weekly_outputs/
 data/
+2020/
+2021/
+2022/
+2023/
+2024/
+# Ignore the specific directories
+weekly_outputs/
+D_CHANNEL/
+D_CUSTOMER/
+D_DATE/
+D_TIME/
+D_PRODUCT/
 
 # Ignore the specific .py & .csv file
 Data_Gen.py
