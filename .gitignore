@@ -20,7 +20,6 @@ D_TIME/
 D_PRODUCT/
 
 # Ignore the specific .py & .csv file
-Data_Gen.py
 fact_table.csv
 
 # Byte-compiled / optimized / DLL files
